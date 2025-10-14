@@ -1,0 +1,36 @@
+{
+  "name": "primeshop",
+  "version": "1.0.0",
+  "proxy": "http://localhost:5000",
+  "description": "eCommerce Application with MERN Stack",
+  "type": "module",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Arman Bijoy",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/armanbijoy/PrimeShop.git"
+  },
+  "bugs": {
+    "url": "https://github.com/armanbijoy/PrimeShop/issues"
+  },
+  "homepage": "https://github.com/armanbijoy/PrimeShop#readme",
+  "dependencies": {
+    "axios": "^1.12.2",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "mongoose": "^8.19.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1",
+    "nodemon": "^3.1.10"
+  }
+}
