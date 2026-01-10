@@ -4,7 +4,6 @@ import './assets/styles/bootstrap.custom.css';
 import './assets/styles/index.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -31,7 +30,6 @@ import UserListScreen from './screens/admin/UserListScreen';
 import UserEditScreen from './screens/admin/UserEditScreen';
 import store from './store';
 import { Provider } from 'react-redux';
-import { PayPalScriptProvider } from '@paypal/react-paypal-js';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -76,12 +74,10 @@ root.render(
   <React.StrictMode>
     <HelmetProvider>
       <Provider store={store}>
-        <PayPalScriptProvider deferLoading={true}>
           <RouterProvider router={router} />
-        </PayPalScriptProvider>
       </Provider>
     </HelmetProvider>
   </React.StrictMode>
 );
 
-reportWebVitals();
+
